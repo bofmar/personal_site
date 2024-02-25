@@ -1,0 +1,28 @@
+#warning {
+    font-size: 300px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 80vw;
+}
+
+.image-preview {
+    width: 100%;
+}
