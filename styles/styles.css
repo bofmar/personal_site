@@ -64,9 +64,12 @@ nav > ul {
 
 }
 
-
+.page-title {
+    text-align: center;
+}
 
 .image-section {
+    padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -75,4 +78,14 @@ nav > ul {
 
 .image-preview {
     width: 100%;
+}
+
+.image-preview:hover,
+.image-preview:focus {
+    outline: 1px solid var(--neon-green);
+}
+
+.popup {
+    width: 90%;
+    height: 90%;
 }
