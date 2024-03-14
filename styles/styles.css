@@ -85,6 +85,13 @@ nav > ul {
     outline: 1px solid var(--neon-green);
 }
 
+.popup {
+    border: none;
+    outline: 0;
+    padding: 0;
+}
+
 .popup > img {
-    width: 100%;
+    max-width: 90vw;
+    max-height: 95vh;
 }
