@@ -85,7 +85,6 @@ nav > ul {
     outline: 1px solid var(--neon-green);
 }
 
-.popup {
-    width: 90%;
-    height: 90%;
+.popup > img {
+    width: 100%;
 }
