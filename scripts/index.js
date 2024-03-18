@@ -1,6 +1,6 @@
 // create the navbar
 const navbar = document.querySelector('nav > ul');
-const rootURI = "https://bofmar.github.io/blender_site/"
+const rootURI = "https://bofmar.github.io/personal_site/"
 const navNames = ["Home", "Renders", "FF XIV", "Blog"];
 const navLinks = [
     `${rootURI}`,
