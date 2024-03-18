@@ -10,6 +10,7 @@
 body {
     color: var(--neon-green);
     margin: 0 auto;
+    font-family: sans-serif;
 }
 
 a {
