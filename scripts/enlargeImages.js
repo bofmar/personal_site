@@ -3,9 +3,13 @@ const popup = document.createElement('dialog');
 popup.className = 'popup';
 document.body.appendChild(popup);
 
+const closeIcon = new Image();
+closeIcon.src = "../resources/icons/close.svg"
+console.log(closeIcon);
+
 const closeButton = document.createElement("button");
-closeButton.innerText = "X";
 closeButton.classList = "close-button";
+closeButton.appendChild(closeIcon);
 
 for(let i = 0; i < images.length; i++) {
     images[i].addEventListener("click", e => {
