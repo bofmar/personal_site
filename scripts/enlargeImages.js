@@ -11,6 +11,10 @@ const closeButton = document.createElement("button");
 closeButton.classList = "close-button";
 closeButton.appendChild(closeIcon);
 
+closeButton.addEventListener("click", e=> {
+    popup.close();
+});
+
 for(let i = 0; i < images.length; i++) {
     images[i].addEventListener("click", e => {
         const image = document.createElement("img");
