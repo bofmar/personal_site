@@ -3,7 +3,9 @@ const popup = document.createElement('dialog');
 popup.className = 'popup';
 document.body.appendChild(popup);
 
-console.log(images.length);
+const closeButton = document.createElement("button");
+closeButton.innerText = "X";
+closeButton.classList = "close-button";
 
 for(let i = 0; i < images.length; i++) {
     images[i].addEventListener("click", e => {
@@ -13,6 +15,7 @@ for(let i = 0; i < images.length; i++) {
             popup.removeChild(popup.firstChild);
         }
         popup.appendChild(image);
+        popup.appendChild(closeButton);
         popup.showModal();
     });
 }

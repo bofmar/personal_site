@@ -69,6 +69,10 @@ nav > ul {
     text-align: center;
 }
 
+/* * * * * * *
+    IMAGES
+* * * * * * */
+
 .image-section {
     padding-top: 50px;
     display: grid;
@@ -89,10 +93,18 @@ nav > ul {
 .popup {
     border: none;
     outline: 0;
-    padding: 0;
+    padding: 30px;
+    position: relative;
 }
 
 .popup > img {
     max-width: 90vw;
-    max-height: 95vh;
+    max-height: 85vh;
+}
+
+.close-button {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

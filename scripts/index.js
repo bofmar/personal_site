@@ -6,7 +6,7 @@ const navLinks = [
     `${rootURI}`,
     `${rootURI}pages/renders.html`,
     `${rootURI}pages/ff_xiv_pics.html`,
-    `https://one-ordinary-dev.netlify.app/`]
+    `https://one-ordinary-dev.netlify.app/`];
 
 function createLink(name, link) {
     const li = document.createElement('li');
