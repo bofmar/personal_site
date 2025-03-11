@@ -49,6 +49,10 @@ button {
     color: red;
 }
 
+.title-image-icon {
+    width: 200px;
+}
+
 /* * * * * * *
   NAVIGATION
 * * * * * * */
@@ -77,6 +81,9 @@ nav > ul {
 
 .page-title {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* * * * * * *
@@ -89,6 +96,7 @@ nav > ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     width: 80vw;
+    margin-bottom: 2vh;
 }
 
 .image-preview {
