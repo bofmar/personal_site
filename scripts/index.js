@@ -1,11 +1,12 @@
 // create the navbar
 const navbar = document.querySelector('nav > ul');
 const rootURI = "https://bofmar.github.io/personal_site/"
-const navNames = ["Home", "Renders", "FF XIV","Other Games", "Blog"];
+const navNames = ["Home", "Renders", "FF XIV", "High End Content", "Other Games", "Blog"];
 const navLinks = [
     `${rootURI}`,
     `${rootURI}pages/renders.html`,
     `${rootURI}pages/ff_xiv_pics.html`,
+    `${rootURI}pages/high_end_content.html`,
     `${rootURI}pages/other_games_pics.html`,
     `https://one-ordinary-dev.netlify.app/`];
 
