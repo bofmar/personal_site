@@ -5,7 +5,6 @@ document.body.appendChild(popup);
 
 const closeIcon = new Image();
 closeIcon.src = "../resources/icons/close.svg"
-console.log(closeIcon);
 
 const closeButton = document.createElement("button");
 closeButton.classList = "close-button";
