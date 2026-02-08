@@ -206,9 +206,166 @@ content = {
                     {role_name: "dps", cleared : false}
                 ]
             }
+        ]
+    },
+    heavensward : {
+        expansionName : "Heavensward",
+        extremes : [
+            {
+                name : "Bsimark EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Ravana EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Minstrel's Ballad: Thordan's Reign",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sephirot EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Minstrel's Ballad: Nidhogg's Rage",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sophia EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Zurvan EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            }
         ],
-        ultimate : [],
-        chaotics : [],
+        savage : [
+            {
+                name : "Alexander - The Fist of the Father (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Cuff of the Father (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Arm of the Father (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Burden of the Father (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Fist of the Son (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Cuff of the Son (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Arm of the Son (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Burden of the Son (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Eyes of the Creator (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Breath of the Creator (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Heart of the Creator (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alexander - The Soul of the Creator (Savage)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            }
+        ]
     }
 };
 
@@ -256,36 +413,37 @@ for (const expansion in content) {
     // create the sectrion
     const section = document.createElement("section");
     section.classList.add("clears-section");
-    // create the title
-    const title = document.createElement("h1");
-    title.innerText = content[expansion].expansionName;
-    section.appendChild(title);
+    // create the banner
+    const banner = document.createElement("img");
+    banner.src = `../resources/ff14/${content[expansion].expansionName}_banner.jpg`;
+    banner.classList.add("banner");
+    section.appendChild(banner);
     // create lists
-    if (content[expansion].extremes.length !== 0) {
+    if (content[expansion]?.extremes && content[expansion].extremes.length !== 0) {
         const listElements = createList("Extremes", content[expansion].extremes, "ex");
         listElements.map( e => {
             section.appendChild(e);
         })
     }
-    if (content[expansion].arr_raids.length !== 0) {
+    if (content[expansion]?.arr_raids && content[expansion].arr_raids.length !== 0) {
         const listElements = createList("ARR Raids", content[expansion].arr_raids, "arr_raids");
         listElements.map( e => {
             section.appendChild(e);
         })
     }
-    if (content[expansion].savage.length !== 0) {
+    if (content[expansion]?.savage && content[expansion].savage.length !== 0) {
         const listElements = createList("Savage Tier", content[expansion].savage, "savage");
         listElements.map( e => {
             section.appendChild(e);
         })
     }
-    if (content[expansion].ultimate.length !== 0) {
+    if (content[expansion]?.ultimate && content[expansion].ultimate.length !== 0) {
         const listElements = createList("Ultimate", content[expansion].ultimate, "ultimate");
         listElements.map( e => {
             section.appendChild(e);
         })
     }
-    if (content[expansion].chaotics.length !== 0) {
+    if (content[expansion]?.chaotics && content[expansion].chaotics.length !== 0) {
         const listElements = createList("Chaotic", content[expansion].chaotics, "chaotic");
         listElements.map( e => {
             section.appendChild(e);
