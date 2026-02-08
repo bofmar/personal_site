@@ -5,6 +5,7 @@
     --neon-green: #3fb980;
     --off-black: #121212;
     --text-normal: 18px;
+    --text-large: 26px;
 }
 
 body {
@@ -163,4 +164,30 @@ nav > ul {
 .banner {
     height: 10%;
     width: 25vw;
+}
+
+/* * * * * * *
+    BUTTONS
+* * * * * * */
+
+.nav-button{
+    font-size: var(--text-large);
+    width: 10%;
+    margin: 20px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.nav-button:hover{
+    background-color: var(--neon-green);
+    color: var(--off-black);
+}
+
+:disabled {
+    color: gray;   
+}
+.nav-button[disabled]:hover {
+    cursor: not-allowed;
+    color: gray;
+    background-color: transparent;
 }

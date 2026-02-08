@@ -84,14 +84,51 @@ let imgs = {
 };
 
 const imageArea = document.querySelector(".image-section");
+const nextButton = document.querySelector("#next-button");
+const previewsButton = document.querySelector("#previews-button");
+previewsButton.disabled = true;
 
-imgs[imageArea.id].map(
-    image => {
-        const newImageElement = document.createElement("img");
-        newImageElement.src = image.path;
-        newImageElement.alt = image.alt;
-        newImageElement.title = image.tile ? image.tile : image.alt;
-        newImageElement.classList.add("image-preview");
-        imageArea.appendChild(newImageElement);
+let position = 0;
+
+function getImages() {
+    imageArea.innerHTML = "";
+    if (imgs[imageArea.id].length === 0) {
+        const noImages = document.createElement("h1");
+        noImages.innerText = "No images exist for this page.... Yet!";
+        imageArea.appendChild(noImages);
+        return
     }
-)
+    const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
+    imgs[imageArea.id].slice(position, sliceSize).map(
+        image => {
+            const newImageElement = document.createElement("img");
+            newImageElement.src = image.path;
+            newImageElement.alt = image.alt;
+            newImageElement.title = image.tile ? image.tile : image.alt;
+            newImageElement.classList.add("image-preview");
+            imageArea.appendChild(newImageElement);
+        }
+    )
+};
+
+nextButton.addEventListener("click", (e)=> {
+    e.preventDefault();
+    position = position + 12;
+    previewsButton.disabled = false;
+    if(imgs[imageArea.id].length <= position + 12) {
+        nextButton.disabled = true;
+    }
+    getImages();
+});
+
+previewsButton.addEventListener("click", (e)=> {
+    e.preventDefault();
+    position = position - 12;
+    nextButton.disabled = false;
+    if(position === 0){
+        previewsButton.disabled = true;
+    }    
+    getImages();
+});
+
+getImages();
