@@ -366,7 +366,192 @@ content = {
                 ]
             }
         ]
-    }
+    },
+    stormblood : {
+        expansionName : "stormblood",
+        extremes : [
+            {
+                name : "Susano EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Lakshmi EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Minstrel's Ballad: Shinryu's Domain",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Auspice: Byakko EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Minstrel's Ballad: Tsukuyomi's Pain",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Great Hunt EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Auspice: Suzaku EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Auspice: Seiryu EX",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            }    
+        ],
+        savage : [
+            {
+                name : "Deltascape V1.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Deltascape V2.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Deltascape V3.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Deltascape V4.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sigmascape V1.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sigmascape V2.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sigmascape V3.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Sigmascape V4.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alphascape V1.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alphascape V2.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alphascape V3.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "Alphascape V4.0",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            }    
+        ],
+        ultimate : [
+            {
+                name : "The Unending Coil of Bahamut (Ultimate)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            },
+            {
+                name : "The Weapon's Refrain (Ultimate)",
+                roles : [
+                    {role_name : "tank", cleared : false},
+                    {role_name: "healer", cleared : false},
+                    {role_name: "dps", cleared : false}
+                ]
+            }
+        ]
+    },
 };
 
 const exImagePath = "../resources/icons/24px-Trial.png";
