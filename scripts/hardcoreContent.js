@@ -1,6 +1,6 @@
 content = {
     arr : {
-        expansionName : "ARR",
+        expansionName : "arr",
         extremes : [
             {
                 name : "The Minstrel's Ballad: Ultima's Bane",
@@ -209,7 +209,7 @@ content = {
         ]
     },
     heavensward : {
-        expansionName : "Heavensward",
+        expansionName : "heavensward",
         extremes : [
             {
                 name : "Bsimark EX",
