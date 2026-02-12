@@ -121,6 +121,13 @@ function getImages() {
 
 function loadNewImages() {
     const children = Array.from(imageArea.childNodes);
+    // reset all images
+    children.map( image => {
+        image.src = "";
+        image.alt = "";
+        image.title = "";
+    });
+    // then apply the new images
     const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
     imgs[imageArea.id].slice(position, sliceSize).map(
         (image, i) => {
