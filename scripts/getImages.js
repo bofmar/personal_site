@@ -97,11 +97,13 @@ previewsButton.disabled = true;
 let position = 0;
 
 function getImages() {
-    imageArea.innerHTML = "";
+    imageArea.innerHTML = ""; //no images are available
     if (imgs[imageArea.id].length === 0) {
         const noImages = document.createElement("h1");
         noImages.innerText = "No images exist for this page.... Yet!";
         imageArea.appendChild(noImages);
+        nextButton.disabled = true;
+        previewsButton.disabled = true;
         return
     }
     const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
@@ -114,7 +116,20 @@ function getImages() {
             newImageElement.classList.add("image-preview");
             imageArea.appendChild(newImageElement);
         }
-    )
+    );
+};
+
+function loadNewImages() {
+    const children = Array.from(imageArea.childNodes);
+    const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
+    imgs[imageArea.id].slice(position, sliceSize).map(
+        (image, i) => {
+            const currentChild = children[i];
+            currentChild.src = image.path;
+            currentChild.alt = image.alt;
+            currentChild.title = image.title ? image.title : image.alt;
+        }
+    );        
 };
 
 nextButton.addEventListener("click", (e)=> {
@@ -124,7 +139,7 @@ nextButton.addEventListener("click", (e)=> {
     if(imgs[imageArea.id].length <= position + 12) {
         nextButton.disabled = true;
     }
-    getImages();
+    loadNewImages();
 });
 
 previewsButton.addEventListener("click", (e)=> {
@@ -134,7 +149,7 @@ previewsButton.addEventListener("click", (e)=> {
     if(position === 0){
         previewsButton.disabled = true;
     }    
-    getImages();
+    loadNewImages();
 });
 
 getImages();
