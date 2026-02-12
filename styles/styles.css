@@ -43,13 +43,6 @@ button {
     background: linear-gradient(135deg, rgba(48,48,50,1) 0%, rgba(28,28,32,1) 50%, rgba(0,0,0,1) 100%);
 }
 
-#warning { /* REMOVE THESE LATER */
-    font-size: 300px;
-    font-weight: bold;
-    text-align: center;
-    color: red;
-}
-
 .title-image-icon {
     width: 200px;
 }
