@@ -1,6 +1,12 @@
 let imgs = {
     ffxiv : [
+        {"path" : "../resources/ff14/shb005.jpg", "alt" : "Finished Shadowbringers 11/02/2026"},
+        {"path" : "../resources/ff14/shb004.jpg", "alt" : "Before final comfortation with Hades"},
+        {"path" : "../resources/ff14/shb003.jpg", "alt" : "IT'S PEOPLE!!!"},
         {"path" : "../resources/ff14/titania-real.png", "alt" : "Titania wants to throw hands"},
+        {"path" : "../resources/ff14/shb002.jpg", "alt" : "More moogle hate on PCT quest line"},
+        {"path" : "../resources/ff14/shb001.jpg", "alt" : "All hail the holy serpent!"},
+        {"path" : "../resources/ff14/stb001.jpg", "alt" : "Ramza hates the moogles"},
         {"path" : "../resources/ff14/ira new sch glam 2026.jpg", "alt" : "New glam for my SCH - 2026"},
         {"path" : "../resources/ff14/heavensward.webp", "alt" : "Reached Heavensward! 10/04/25"},
         {"path" : "../resources/ff14/new_drip.webp", "alt" : "Sporting a new outfit - First glam ever"},
