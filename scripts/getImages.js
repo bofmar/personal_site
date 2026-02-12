@@ -1,4 +1,4 @@
-let imgs = {
+const imgs = {
     ffxiv : [
         {"path" : "../resources/ff14/shb005.jpg", "alt" : "Finished Shadowbringers 11/02/2026"},
         {"path" : "../resources/ff14/shb004.jpg", "alt" : "Before final comfortation with Hades"},
@@ -92,6 +92,7 @@ let imgs = {
 const imageArea = document.querySelector(".image-section");
 const nextButton = document.querySelector("#next-button");
 const previewsButton = document.querySelector("#previews-button");
+const MAX_IMAGES = 12;
 previewsButton.disabled = true;
 
 let position = 0;
@@ -106,7 +107,7 @@ function getImages() {
         previewsButton.disabled = true;
         return
     }
-    const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
+    const sliceSize = imgs[imageArea.id].length >= position + MAX_IMAGES ? position + MAX_IMAGES : imgs[imageArea.id].length;
     imgs[imageArea.id].slice(position, sliceSize).map(
         image => {
             const newImageElement = document.createElement("img");
@@ -128,7 +129,7 @@ function loadNewImages() {
         image.title = "";
     });
     // then apply the new images
-    const sliceSize = imgs[imageArea.id].length >= position +12 ? position + 12 : imgs[imageArea.id].length;
+    const sliceSize = imgs[imageArea.id].length >= position +MAX_IMAGES ? position + MAX_IMAGES : imgs[imageArea.id].length;
     imgs[imageArea.id].slice(position, sliceSize).map(
         (image, i) => {
             const currentChild = children[i];
@@ -141,9 +142,9 @@ function loadNewImages() {
 
 nextButton.addEventListener("click", (e)=> {
     e.preventDefault();
-    position = position + 12;
+    position = position + MAX_IMAGES;
     previewsButton.disabled = false;
-    if(imgs[imageArea.id].length <= position + 12) {
+    if(imgs[imageArea.id].length <= position + MAX_IMAGES) {
         nextButton.disabled = true;
     }
     loadNewImages();
@@ -151,7 +152,7 @@ nextButton.addEventListener("click", (e)=> {
 
 previewsButton.addEventListener("click", (e)=> {
     e.preventDefault();
-    position = position - 12;
+    position = position - MAX_IMAGES;
     nextButton.disabled = false;
     if(position === 0){
         previewsButton.disabled = true;
